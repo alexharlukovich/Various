@@ -20,3 +20,14 @@ img_3 = qr.make_image(image_factory=StyledPilImage,
 img_1.save("111.png")
 img_2.save("222.png")
 img_3.save("333.png")
+
+#############
+
+import shutil
+total_b, usage_b, free_b = shutil.disk_usage(' . ')
+
+gb = 10 ** 9
+
+print('Total: {:6.2f} GB'. format(total_b / gb))
+print('Used: {:6.2f} GB'. format(usage_b / gb))
+print('Free: {:6.2f} GB'. format(free_b / gb))
