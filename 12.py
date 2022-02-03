@@ -82,16 +82,68 @@ print(random.choice(w))
 # task 6 taxes and tips
 
 
-tax_rate = 0.05
-tip_rate = 0.18
+# tax_rate = 0.05
+# tip_rate = 0.18
+#
+# cost = float(input("Enter the bill amount: "))
+#
+# tax = cost * tax_rate
+# tip = cost * tip_rate
+# total = cost + tax + tip
+#
+# print("Налог составил %.2f, чаевые – %.2f, общая сумма заказа: %.2f" % (tax, tip, total))
+#
+# print("The tax was: %.2f, tips: %.2f, total \
+# ammount: %.2f" % (tax, tip, total))
 
-cost = float(input("Enter the bill amount: "))
+#task 7 The sum of the first n positive numbers
 
-tax = cost * tax_rate
-tip = cost * tip_rate
-total = cost + tax + tip
-# Отобразим результат
-print("Налог составил %.2f, чаевые – %.2f, общая сумма заказа: %.2f" % (tax, tip, total))
+number = float(input("Input your positive number: "))
+sum = ((number)*(number + 1)) / 2
 
-print("The tax was: %.2f, tips: %.2f, total \
-ammount: %.2f" % (tax, tip, total))
+print("The sum of the first", number, "positive numbers is ", sum)
+
+#task 8 Souvenirs and trinkets Compound interest
+
+souvenir = float(input("How many souvenirs do you want to byu?: "))
+trinket = float(input("How many trinkets do you want to byu?: "))
+
+s = 75.33
+t = 112.61
+
+mass = souvenir * s + trinket * t
+
+print("Your order has weight of %.2f" % mass, "gramms")
+
+#task 9 Compound interest
+
+d = float(input("Input your deposite: "))
+pr = 0.04
+interest1 = d * ((1+(pr/12*100))**1)
+interest2 = d * ((1+(pr/12*100))**2)
+interest3 = d * ((1+(pr/12*100))**3)
+
+print("Your money sum at the first year will be %.2f, after second year will be %.2f, after third year will be %.2f" % (interest1, interest2, interest3))
+
+#task 10 Arithmetic
+from math import log10
+a = int(input("input the 'a' number: "))
+b = int(input("input the 'b' number: "))
+print(a, "+", b, "=", a + b)
+print(a, "-", b, "=", a * b)
+print(a, "/", b, "=", a / b)
+print(a, "%", b, "=", a % b)
+print("decimal logarithm of", a,  "=", log10(a))
+print(a, "the extent of", b, "=", a**b)
+
+# task 11 fuel consumption
+
+us = float(input("Input fuel consumption in MPG: "))
+
+lpg = 3.785
+kmpm = 1.609
+
+lpk = (100 * lpg) / (us * kmpm)
+print("Your fuel consumption in Canada will be %.2f" % lpk, "l/100km")
+
+#task 12 Distance between points on the Earth
