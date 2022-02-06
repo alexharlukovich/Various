@@ -98,52 +98,117 @@ print(random.choice(w))
 
 #task 7 The sum of the first n positive numbers
 
-number = float(input("Input your positive number: "))
-sum = ((number)*(number + 1)) / 2
+# number = float(input("Input your positive number: "))
+# sum = ((number)*(number + 1)) / 2
+#
+# print("The sum of the first", number, "positive numbers is ", sum)
+#
+# #task 8 Souvenirs and trinkets Compound interest
+#
+# souvenir = float(input("How many souvenirs do you want to byu?: "))
+# trinket = float(input("How many trinkets do you want to byu?: "))
+#
+# s = 75.33
+# t = 112.61
+#
+# mass = souvenir * s + trinket * t
+#
+# print("Your order has weight of %.2f" % mass, "gramms")
+#
+# #task 9 Compound interest
+#
+# d = float(input("Input your deposite: "))
+# pr = 0.04
+# interest1 = d * ((1+(pr/12*100))**1)
+# interest2 = d * ((1+(pr/12*100))**2)
+# interest3 = d * ((1+(pr/12*100))**3)
+#
+# print("Your money sum at the first year will be %.2f, after second year will be %.2f, after third year will be %.2f" % (interest1, interest2, interest3))
+#
+# #task 10 Arithmetic
+# from math import log10
+# a = int(input("input the 'a' number: "))
+# b = int(input("input the 'b' number: "))
+# print(a, "+", b, "=", a + b)
+# print(a, "-", b, "=", a * b)
+# print(a, "/", b, "=", a / b)
+# print(a, "%", b, "=", a % b)
+# print("decimal logarithm of", a,  "=", log10(a))
+# print(a, "the extent of", b, "=", a**b)
+#
+# # task 11 fuel consumption
+#
+# us = float(input("Input fuel consumption in MPG: "))
+#
+# lpg = 3.785
+# kmpm = 1.609
+#
+# lpk = (100 * lpg) / (us * kmpm)
+# print("Your fuel consumption in Canada will be %.2f" % lpk, "l/100km")
+#
+# #task 12 Distance between points on the Earth
+# from math import radians
+#
+# cor1 = float(input("input point 1: "))
+# cor2 = float(input("input point 2: "))
+# cor3 = float(input("input point 3: "))
+# cor4 = float(input("input point 4: "))
+#
+# #distance = 6371,01 x arccos(sin(t1) x sin(t2) + cos(t1) x cos(t2) x cos(g1 - g2)).
+#
+# distance = 6371.01 * ((radians(cor1) * radians(cor2)) + (radians(cor1) * radians(cor2) * radians(cor3 - cor4)))
+# print(distance)
 
-print("The sum of the first", number, "positive numbers is ", sum)
+# task 13 Change of banknotes
 
-#task 8 Souvenirs and trinkets Compound interest
+cents_per_toonie = 200
+cents_per_loonie = 100
+cents_per_quarter = 25
+cents_per_dime = 10
+cents_per_nickel = 5
 
-souvenir = float(input("How many souvenirs do you want to byu?: "))
-trinket = float(input("How many trinkets do you want to byu?: "))
+cents = int(input("Input the amount to be exchanged: "))
+print(cents // cents_per_toonie, "двухдолларовых монет")
+cents = cents % cents_per_toonie
+print(cents // cents_per_loonie, "однодолларовых монет")
+cents = cents % cents_per_loonie
+print(cents // cents_per_quarter, "четвертьдолларовых монет")
+cents = cents % cents_per_quarter
+print(cents // cents_per_dime, "десятицентовых монет")
+cents = cents % cents_per_dime
+print(cents // cents_per_nickel, "пятицентовых монет")
+cents = cents % cents_per_nickel
 
-s = 75.33
-t = 112.61
+print(" ", cents, "центов")
 
-mass = souvenir * s + trinket * t
 
-print("Your order has weight of %.2f" % mass, "gramms")
+# task 14 Height
 
-#task 9 Compound interest
+foot = 12
+cm_inch = 2.54
 
-d = float(input("Input your deposite: "))
-pr = 0.04
-interest1 = d * ((1+(pr/12*100))**1)
-interest2 = d * ((1+(pr/12*100))**2)
-interest3 = d * ((1+(pr/12*100))**3)
+print("Input your height:")
+feet = int(input("Введите количество футов: "))
+inchs = int(input("Введите количество дюймов: "))
+cm = (feet * foot + inchs) * cm_inch
+print("Your height in cm is ", cm)
 
-print("Your money sum at the first year will be %.2f, after second year will be %.2f, after third year will be %.2f" % (interest1, interest2, interest3))
+# task 15 Distance
 
-#task 10 Arithmetic
-from math import log10
-a = int(input("input the 'a' number: "))
-b = int(input("input the 'b' number: "))
-print(a, "+", b, "=", a + b)
-print(a, "-", b, "=", a * b)
-print(a, "/", b, "=", a / b)
-print(a, "%", b, "=", a % b)
-print("decimal logarithm of", a,  "=", log10(a))
-print(a, "the extent of", b, "=", a**b)
+# Для этого упражнения вам необходимо будет написать программу, кото-
+# рая будет запрашивать у пользователя расстояние в футах. После этого
+# она должна будет пересчитать это число в дюймы, ярды и мили и вывести
+# на экран. Коэффициенты для пересчета единиц вы без труда найдете
+# в интернете.
 
-# task 11 fuel consumption
+IN_PER_FT = 12
+FT_PER_YARD = 3
+ML_PER_FOOT = 5280
 
-us = float(input("Input fuel consumption in MPG: "))
+print("Input your distance in feet:")
+feet_ = int(input("Your distance is: "))
+yard = feet_ * FT_PER_YARD
+mile = feet_ / ML_PER_FOOT
+inches = feet_ * IN_PER_FT
+print("Your trip is %.2f yards, %.2f miles, %.2f inches" % (yard, mile, inches))
 
-lpg = 3.785
-kmpm = 1.609
-
-lpk = (100 * lpg) / (us * kmpm)
-print("Your fuel consumption in Canada will be %.2f" % lpk, "l/100km")
-
-#task 12 Distance between points on the Earth
