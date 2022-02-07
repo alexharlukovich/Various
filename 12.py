@@ -161,37 +161,37 @@ print(random.choice(w))
 
 # task 13 Change of banknotes
 
-cents_per_toonie = 200
-cents_per_loonie = 100
-cents_per_quarter = 25
-cents_per_dime = 10
-cents_per_nickel = 5
-
-cents = int(input("Input the amount to be exchanged: "))
-print(cents // cents_per_toonie, "двухдолларовых монет")
-cents = cents % cents_per_toonie
-print(cents // cents_per_loonie, "однодолларовых монет")
-cents = cents % cents_per_loonie
-print(cents // cents_per_quarter, "четвертьдолларовых монет")
-cents = cents % cents_per_quarter
-print(cents // cents_per_dime, "десятицентовых монет")
-cents = cents % cents_per_dime
-print(cents // cents_per_nickel, "пятицентовых монет")
-cents = cents % cents_per_nickel
-
-print(" ", cents, "центов")
+# cents_per_toonie = 200
+# cents_per_loonie = 100
+# cents_per_quarter = 25
+# cents_per_dime = 10
+# cents_per_nickel = 5
+#
+# cents = int(input("Input the amount to be exchanged: "))
+# print(cents // cents_per_toonie, "двухдолларовых монет")
+# cents = cents % cents_per_toonie
+# print(cents // cents_per_loonie, "однодолларовых монет")
+# cents = cents % cents_per_loonie
+# print(cents // cents_per_quarter, "четвертьдолларовых монет")
+# cents = cents % cents_per_quarter
+# print(cents // cents_per_dime, "десятицентовых монет")
+# cents = cents % cents_per_dime
+# print(cents // cents_per_nickel, "пятицентовых монет")
+# cents = cents % cents_per_nickel
+#
+# print(" ", cents, "центов")
 
 
 # task 14 Height
 
-foot = 12
-cm_inch = 2.54
-
-print("Input your height:")
-feet = int(input("Введите количество футов: "))
-inchs = int(input("Введите количество дюймов: "))
-cm = (feet * foot + inchs) * cm_inch
-print("Your height in cm is ", cm)
+# foot = 12
+# cm_inch = 2.54
+#
+# print("Input your height:")
+# feet = int(input("Введите количество футов: "))
+# inchs = int(input("Введите количество дюймов: "))
+# cm = (feet * foot + inchs) * cm_inch
+# print("Your height in cm is ", cm)
 
 # task 15 Distance
 
@@ -201,14 +201,77 @@ print("Your height in cm is ", cm)
 # на экран. Коэффициенты для пересчета единиц вы без труда найдете
 # в интернете.
 
-IN_PER_FT = 12
-FT_PER_YARD = 3
-ML_PER_FOOT = 5280
+# IN_PER_FT = 12
+# FT_PER_YARD = 3
+# ML_PER_FOOT = 5280
+#
+# print("Input your distance in feet:")
+# feet_ = int(input("Your distance is: "))
+# yard = feet_ * FT_PER_YARD
+# mile = feet_ / ML_PER_FOOT
+# inches = feet_ * IN_PER_FT
+# print("Your trip is %.2f yards, %.2f miles, %.2f inches" % (yard, mile, inches))
+#
+# # task 16 Area and volume
+#
+# from math import pi
+#
+# r = radius = float(input("Input your circle radius: "))
+# area = pi * r ** 2
+# volume = 4 / 3 * (pi * r ** 3)
+#
+# print(" Your circle area is %.2f cm, you sphere volume is %.2f cm" % (area, volume))
 
-print("Input your distance in feet:")
-feet_ = int(input("Your distance is: "))
-yard = feet_ * FT_PER_YARD
-mile = feet_ / ML_PER_FOOT
-inches = feet_ * IN_PER_FT
-print("Your trip is %.2f yards, %.2f miles, %.2f inches" % (yard, mile, inches))
+# task 17 Heat capacity
 
+# WATER_HEAT_CAPACITY = 4.0186
+# ELECTRICITY_PRICE = 8.9
+# J_TO_KWH = 2.777e-7
+#
+# volume = float(input("Volume of water in ml: "))
+# d_temp = float(input("Temperature rise(in Celsius degrees): "))
+#
+# q = volume * d_temp * WATER_HEAT_CAPACITY
+# kwh = q * J_TO_KWH
+# cost = kwh * ELECTRICITY_PRICE
+# print("Needs %.2f joules of energy" % q)
+# print("The cost of energy %.2f cents: " % cost)
+
+# task 18 Cylinder volume
+
+# from math import pi
+#
+# r = radius = float(input("Input your cylinder radius: "))
+# h = height = float(input("Input your cylinder height: "))
+#
+# v = pi * r * h
+#
+# print("Your cylinder's volume is %.1f" % v, "cm3")
+
+# task 19 Free fall
+
+from math import sqrt
+
+GRAVITY = 9.8
+
+d = float(input("Object release height, m:  "))
+
+vf = sqrt(2 * GRAVITY * d)
+print("The object will reach the ground at speed %.1f" % vf, "m/s")
+
+# task 20 The equation of state of an ideal gas
+
+# PV = nRT,
+# где P – это давление в паскалях, V – объем в литрах, n – количество ве-
+# щества в молях, R – универсальная газовая постоянная, равная 8,314
+# Дж/(моль·К), а T – температура по шкале Кельвина.
+# Напишите программу для измерения количества
+
+P = float(input("Input pressure: "))
+R = 8.314
+n = float(input("Input volume: "))
+V = 12
+T = float(input("Input temperature Kelvins: "))
+
+n = (P * V) / (R * T)
+print(n)
