@@ -250,14 +250,14 @@ print(random.choice(w))
 
 # task 19 Free fall
 
-from math import sqrt
-
-GRAVITY = 9.8
-
-d = float(input("Object release height, m:  "))
-
-vf = sqrt(2 * GRAVITY * d)
-print("The object will reach the ground at speed %.1f" % vf, "m/s")
+# from math import sqrt
+#
+# GRAVITY = 9.8
+#
+# d = float(input("Object release height, m:  "))
+#
+# vf = sqrt(2 * GRAVITY * d)
+# print("The object will reach the ground at speed %.1f" % vf, "m/s")
 
 # task 20 The equation of state of an ideal gas
 
@@ -267,11 +267,79 @@ print("The object will reach the ground at speed %.1f" % vf, "m/s")
 # Дж/(моль·К), а T – температура по шкале Кельвина.
 # Напишите программу для измерения количества
 
-P = float(input("Input pressure: "))
-R = 8.314
-n = float(input("Input volume: "))
-V = 12
-T = float(input("Input temperature Kelvins: "))
+# P = float(input("Input pressure: "))
+# R = 8.314
+# n = float(input("Input volume: "))
+# V = 12
+# T = float(input("Input temperature Kelvins: "))
+#
+# n = (P * V) / (R * T)
+# print(n)
 
-n = (P * V) / (R * T)
-print(n)
+# task 21 The area of the triangle
+# h = float(input("Input the height of the triangle, m: "))
+# b = float(input("Input the length of the triangle base, m: "))
+#
+# area = (b * h) / 2
+#
+# print("The area of your triangle is %.2f meters" % area)
+
+# task 22 The area of the triangle (another one)
+
+# s1 = float(input("Input lenght of the first side of the triangle, m : "))
+# s2 = float(input("Input lenght of the second side of the triangle, m : "))
+# s3 = float(input("Input lenght of the third side of the triangle, m : "))
+#
+# s = (s1 + s2 + s3) / 2
+# area = (s * (s - s1) * (s - s2) * (s - s3)) ** 0.5
+#
+# print("The area of your triangle is %.2f meters" % area)
+
+# task 23 The area of the regular polygon
+# from math import tan, pi
+#
+# s = float(input("Enter the lenght of the sides, m: "))
+# n = int(input("Enter the number of the sides, pcs: "))
+#
+# area = (n * s ** 2) / (4 * tan(pi / n))
+#
+# print("The area of the pokygon is ", area)
+
+#task 24 Time units
+
+# SEC_PER_DAY = 86400
+# SEC_PER_HOUR = 3600
+# SEC_PER_MINUTE = 60
+#
+# d = int(input("Enter number of days: "))
+# h = int(input("Enter number of hours: "))
+# m = int(input("Enter number of minutes: "))
+#
+# total = d * SEC_PER_DAY + h * SEC_PER_HOUR + m * SEC_PER_MINUTE
+#
+# print("Your number of seconds is", total)
+
+# task 25 Time units (another one)
+
+# SEC_PER_DAY = 86400
+# SEC_PER_HOUR = 3600
+# SEC_PER_MINUTE = 60
+#
+# seconds = int(input("Enter number of seconds: "))
+#
+# days = seconds / SEC_PER_DAY
+# seconds = seconds % SEC_PER_DAY
+# hours = seconds / SEC_PER_HOUR
+# seconds = seconds % SEC_PER_HOUR
+# minutes = seconds / SEC_PER_MINUTE
+# seconds = seconds % SEC_PER_MINUTE
+#
+# print("Duration:", \
+# "%d:%02d:%02d:%02d." % (days, hours, minutes, seconds))
+
+#task 26 Current time
+
+from time import asctime
+
+a = asctime()
+print(a)
