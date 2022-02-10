@@ -438,3 +438,33 @@ print(random.choice(w))
 # print("Nominal price: %5.2f" % regular_price)
 # print("Discount: %5.2f" % discount)
 # print("Total: %5.2f" % total)
+
+# task 35 Odd or even?
+
+# num = int(input("Enter your number: "))
+#
+# if num == 1:
+#     print(num, "even")
+# else:
+#     print(num, 'odd')
+
+# task 36 Canine age
+
+# num = int(input("Enter your age: "))
+# if 0<= num <=2:
+#     print("Your canine age is:", 21)
+# elif num >= 2:
+#     num1 = 21 + num * 4 - 2
+#     print("Your canine age is:", num1)
+# elif num < 0:
+#     print("Wrong number!")
+
+# task 37 Vowels and consonants
+
+letter = input("Enter letter of the latin alphabet: ")
+if letter == "a" or letter == "e" or letter == "i" or letter == "o" or letter == "u":
+    print("it's vowel letter")
+elif letter == "y":
+    print("Sometimes this letter is vowel, sometimes is consonant")
+else:
+    print("This letter is consonant")
