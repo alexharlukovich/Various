@@ -503,6 +503,12 @@ print(random.choice(w))
 # elif month == "February":
 #     days = "28 or 29"
 # print("Number of the days in your month is:", days)
+from calendar import monthrange
+import datetime
+
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "December"]
+month_number = months.index( input("Enter the name of the month:") )
+print("Number of the days in your month is:", monthrange(datetime.datetime.now().year, month_number)[1])
 
 # task 40 Sound volume
 
