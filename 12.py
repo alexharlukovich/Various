@@ -461,10 +461,66 @@ print(random.choice(w))
 
 # task 37 Vowels and consonants
 
-letter = input("Enter letter of the latin alphabet: ")
-if letter == "a" or letter == "e" or letter == "i" or letter == "o" or letter == "u":
-    print("it's vowel letter")
-elif letter == "y":
-    print("Sometimes this letter is vowel, sometimes is consonant")
+# letter = input("Enter letter of the latin alphabet: ")
+# if letter == "a" or letter == "e" or letter == "i" or letter == "o" or letter == "u":
+#     print("it's vowel letter")
+# elif letter == "y":
+#     print("Sometimes this letter is vowel, sometimes is consonant")
+# else:
+#     print("This letter is consonant")
+
+# task 38 Guess the figure
+
+# nsides = int(input("Enter number the sides of the shape: "))
+# name = ""
+# if nsides == 3:
+#     name = "triangle"
+# elif nsides == 4:
+#     name = "rectangle"
+# elif nsides == 5:
+#     name = "pentagon"
+# elif nsides == 6:
+#     name = "hexagon"
+# elif nsides == 7:
+#     name = "heptagon"
+# elif nsides == 8:
+#     name = "octagon"
+# elif nsides == 9:
+#     name = "nonagon"
+# elif nsides == 10:
+#     name = "decagon"
+# if name == "":
+#     print("The entered number of sides is not supported by the program.")
+# else:
+#     print("This figure is:", name)
+
+# task 39 How many days in the month?
+
+# month = input("Enter the name of the month:")
+# days = 31
+# if month == "Apil" or month == "June" or month == "September" or month == "November":
+#     days = 30
+# elif month == "February":
+#     days = "28 or 29"
+# print("Number of the days in your month is:", days)
+
+# task 40 Sound volume
+
+vol = int(input("Enter the sound volume: "))
+
+if vol == 130:
+    print("Jackhammer")
+elif vol == 106:
+    print("Petrol lawn mower")
+elif vol == 70:
+    print("Alarm clock")
+elif vol == 40:
+    print("Quiet room")
+elif 130 <= vol <= 106:
+    print("Loud sound, my boy! Between jackhammeh and petrol lawn mower")
+elif 70 <= vol <= 106:
+    print("Loud sound! Between petrol lawn mower and alarm clock")
+elif 40 <= vol <= 70:
+    print("Quiet sound! Between alarm clock and quiet room!")
 else:
-    print("This letter is consonant")
+    print("Hey! Sound volume beyond measurement!")
