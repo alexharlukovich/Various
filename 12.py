@@ -503,30 +503,111 @@ print(random.choice(w))
 # elif month == "February":
 #     days = "28 or 29"
 # print("Number of the days in your month is:", days)
-from calendar import monthrange
-import datetime
-
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "December"]
-month_number = months.index( input("Enter the name of the month:") )
-print("Number of the days in your month is:", monthrange(datetime.datetime.now().year, month_number)[1])
+# from calendar import monthrange
+# import datetime
+#
+# months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "December"]
+# month_number = months.index( input("Enter the name of the month:") )
+# print("Number of the days in your month is:", monthrange(datetime.datetime.now().year, month_number)[1])
 
 # task 40 Sound volume
 
-vol = int(input("Enter the sound volume: "))
+# vol = int(input("Enter the sound volume: "))
+#
+# if vol == 130:
+#     print("Jackhammer")
+# elif vol == 106:
+#     print("Petrol lawn mower")
+# elif vol == 70:
+#     print("Alarm clock")
+# elif vol == 40:
+#     print("Quiet room")
+# elif 130 <= vol <= 106:
+#     print("Loud sound, my boy! Between jackhammeh and petrol lawn mower")
+# elif 70 <= vol <= 106:
+#     print("Loud sound! Between petrol lawn mower and alarm clock")
+# elif 40 <= vol <= 70:
+#     print("Quiet sound! Between alarm clock and quiet room!")
+# else:
+#     print("Hey! Sound volume beyond measurement!")
 
-if vol == 130:
-    print("Jackhammer")
-elif vol == 106:
-    print("Petrol lawn mower")
-elif vol == 70:
-    print("Alarm clock")
-elif vol == 40:
-    print("Quiet room")
-elif 130 <= vol <= 106:
-    print("Loud sound, my boy! Between jackhammeh and petrol lawn mower")
-elif 70 <= vol <= 106:
-    print("Loud sound! Between petrol lawn mower and alarm clock")
-elif 40 <= vol <= 70:
-    print("Quiet sound! Between alarm clock and quiet room!")
+# task 41 Triangle classification
+
+# side1 = float(input("Enter the length of the first side "))
+# side2 = float(input("Enter the length of the second side "))
+# side3 = float(input("Enter the length of the third side "))
+#
+# if side1 == side2 and side2 == side3:
+#     tri_type = "equilateral"
+# elif side1 == side2 or side2 == side3 or side3 == side1:
+#     tri_type = "isosceles"
+# else:
+#     tri_type = "versatile"
+#
+# print("This is", tri_type, "triangle.")
+
+# task 42 Find out the frequency by note
+
+# C4_FREQ = 261.63
+# D4_FREQ = 293.66
+# E4_FREQ = 329.63
+# F4_FREQ = 349.23
+# G4_FREQ = 392.00
+# A4_FREQ = 440.00
+# B4_FREQ = 493.88
+#
+# name = input("Enter the name of the note in the form of a letter and a number, for example C4: ")
+#
+# note = name[0]
+# octave = int(name[1])
+#
+# if note == "C":
+#     freq = C4_FREQ
+# elif note == "D":
+#     freq = D4_FREQ
+# elif note == "E":
+#     freq = E4_FREQ
+# elif note == "F":
+#     freq = F4_FREQ
+# elif note == "G":
+#     freq = G4_FREQ
+# elif note == "A":
+#     freq = A4_FREQ
+# elif note == "B":
+#     freq = B4_FREQ
+#
+# freq = freq / 2 ** (4 - octave)
+# print("Note frequency", name, "equals", freq)
+
+# task 43 Find out the note by frequency
+
+C4_FREQ = 261.63
+D4_FREQ = 293.66
+E4_FREQ = 329.63
+F4_FREQ = 349.23
+G4_FREQ = 392.00
+A4_FREQ = 440.00
+B4_FREQ = 493.88
+LIMIT = 1
+
+freq = float(input("Введите частоту ноты (Гц): "))
+if freq >= C4_FREQ - LIMIT and freq <= C4_FREQ + LIMIT:
+    note = "C4"
+elif freq >= D4_FREQ - LIMIT and freq <= D4_FREQ + LIMIT:
+    note = "D4"
+elif freq >= E4_FREQ - LIMIT and freq <= E4_FREQ + LIMIT:
+    note = "E4"
+elif freq >= F4_FREQ - LIMIT and freq <= F4_FREQ + LIMIT:
+    note = "F4"
+elif freq >= G4_FREQ - LIMIT and freq <= G4_FREQ + LIMIT:
+    note = "G4"
+elif freq >= A4_FREQ - LIMIT and freq <= A4_FREQ + LIMIT:
+    note = "A4"
+elif freq >= B4_FREQ - LIMIT and freq <= B4_FREQ + LIMIT:
+    note = "B4"
 else:
-    print("Hey! Sound volume beyond measurement!")
+    note = ""
+if note == "":
+    print("Ноты с заданной частотой не существует.")
+else:
+    print("Введенная частота примерно соответствует ноте", note)
